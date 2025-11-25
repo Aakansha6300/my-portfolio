@@ -1,64 +1,116 @@
-<style>
-  :root {
-    --primary-color: #2b1e3a; /* Darker rich purple background */
-    --secondary-color: #3c2a55; /* Slightly lighter purple for cards/buttons */
-    --accent-color: #ff69b4; /* Hot pink accent */
-    --text-color: #f0e6f5; /* Soft off-white for text */
-    --card-bg: #3c2a55; /* Card background, darker than primary */
-    --chip-bg: #532f7f; /* Chips slightly darker purple */
-    --chip-text: #ffe6f0; /* Soft pink text inside chips */
-  }
+:root {
+  --primary-color: #3b1e5b;   /* Dark purple background */
+  --secondary-color: #5c2a7f; /* Lighter purple for cards and sections */
+  --accent-color: #ff66b2;    /* Bright pink for buttons, links, accents */
+  --text-color: #f7e6f0;      /* Soft off-white text */
+  --card-bg: #5c2a7f;          /* Card background */
+  --chip-bg: #7a3db0;          /* Chips background */
+  --chip-text: #ffe6f5;        /* Chips text */
+  --hero-color: #ff99cc;       /* Hero section heading color */
+}
 
-  body {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  .card {
-    background-color: var(--card-bg);
-    padding: 20px;
-    margin: 20px;
-    border-radius: 8px;
-  }
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
 
-  .chip {
-    background-color: var(--chip-bg);
-    color: var(--chip-text);
-    padding: 5px 10px;
-    border-radius: 16px;
-    margin: 4px;
-    display: inline-block;
-  }
+a:hover {
+  text-decoration: underline;
+}
 
-  a {
-    color: var(--accent-color);
-    text-decoration: none;
-  }
+header.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: var(--secondary-color);
+}
 
-  a:hover {
-    text-decoration: underline;
-  }
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--accent-color);
+}
 
-  .btn.primary {
-    background-color: var(--accent-color);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 4px;
-    margin-right: 10px;
-  }
+.nav-name {
+  margin-left: 10px;
+  font-size: 20px;
+  color: var(--text-color);
+}
 
-  .btn.secondary {
-    background-color: var(--secondary-color);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 4px;
-  }
+.nav-links a {
+  margin-left: 20px;
+  font-weight: 500;
+}
 
-  h1, h2, h3 {
-    color: #ffe6f0; /* Soft pink for headings */
-  }
-</style>
+.card {
+  background-color: var(--card-bg);
+  padding: 25px;
+  margin: 20px auto;
+  border-radius: 12px;
+  max-width: 900px;
+}
+
+.chip {
+  background-color: var(--chip-bg);
+  color: var(--chip-text);
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin: 4px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.btn.primary {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.btn.secondary {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+h1, h2, h3 {
+  color: var(--hero-color);
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #5c2a7f, #ff66b2);
+}
+
+.hero-tag {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+footer.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
 
