@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aakansha | DevOps Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-left">
+      <span class="logo">A</span>
+      <span class="nav-name">Aakansha</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="hero-tag">DevOps • AWS • CI/CD • Docker</p>
+        <h1>Hi, I'm <span class="accent">Aakansha</span></h1>
+        <p class="hero-subtitle">
+          DevOps Engineer with 4 years of total experience (2+ years in DevOps),
+          working with AWS, CI/CD pipelines, Docker, Linux, and automation tools.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="#contact" class="btn secondary">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>
+        I’m a DevOps Engineer focused on building reliable CI/CD pipelines,
+        automating infrastructure on AWS, and improving deployment workflows.
+        I enjoy working with tools like GitHub Actions, Jenkins, Docker,
+        Ansible, and monitoring solutions to keep systems stable and scalable.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <div class="chip-group">
+        <div class="chip">AWS (S3, EC2, IAM, CloudFront, VPC)</div>
+        <div class="chip">CI/CD (GitHub Actions, Jenkins)</div>
+        <div class="chip">Docker, Containers</div>
+        <div class="chip">Linux, Bash Scripting</div>
+        <div class="chip">Git & GitHub</div>
+        <div class="chip">Ansible (Basics)</div>
+        <div class="chip">Monitoring & Logging</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <h3>Static Portfolio Website with CI/CD (AWS S3 + GitHub Actions)</h3>
+        <p class="project-meta">Tech: HTML, CSS, AWS S3, IAM, GitHub Actions</p>
+        <p>
+          Built and deployed this portfolio as a static website hosted on Amazon S3.
+          Configured a GitHub Actions workflow that automatically syncs code changes
+          to the S3 bucket on every push to the <code>main</code> branch, following
+          DevOps best practices such as least-privilege IAM and secrets management.
+        </p>
+      </article>
+
+      <article class="project">
+        <h3>CI/CD Pipeline with Jenkins & Ansible (Practice)</h3>
+        <p class="project-meta">Tech: Jenkins, Ansible, Git, Linux</p>
+        <p>
+          Implemented a practice CI/CD pipeline where Jenkins pulls code from Git,
+          runs basic checks, and uses Ansible playbooks to deploy changes to a
+          target server. Focused on pipeline stages, idempotent deployments,
+          and configuration management.
+        </p>
+      </article>
+
+      <!-- You can add more project blocks later -->
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>
+        Open to roles and opportunities in DevOps / Cloud Engineering.
+      </p>
+      <ul class="contact-list">
+        <li><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noreferrer">linkedin.com/in/your-profile</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/your-github" target="_blank" rel="noreferrer">github.com/your-github</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Aakansha · DevOps Engineer</p>
+  </footer>
+
+  <script>
+    // Simple JS just to keep the year updated
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
