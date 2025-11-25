@@ -1,295 +1,64 @@
-/* ===== Base ===== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  --bg: #fff1f7;
-  --bg-card: #ffffff;
-  --accent: #ec4899;          /* pink */
-  --accent-soft: #fdf2f8;
-  --accent-secondary: #a855f7; /* purple */
-  --text-main: #1f2933;
-  --text-muted: #6b7280;
-  --border-subtle: #f5d0ea;
-}
-
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top left, #ffe4f3 0, #fdf2ff 40%, #fff 80%);
-  color: var(--text-main);
-  min-height: 100vh;
-}
-
-/* ===== Layout ===== */
-main {
-  max-width: 960px;
-  margin: 80px auto 40px auto;
-  padding: 0 16px;
-}
-
-/* ===== Nav ===== */
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 20px;
-  backdrop-filter: blur(14px);
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 240, 248, 0.9),
-    rgba(255, 250, 255, 0.85)
-  );
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.nav-left {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.logo {
-  width: 30px;
-  height: 30px;
-  border-radius: 999px;
-  background: radial-gradient(circle at 30% 30%, #f9a8d4, #ec4899);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 16px;
-}
-
-.nav-name {
-  font-weight: 600;
-  font-size: 15px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 18px;
-}
-
-.nav-links a {
-  color: var(--text-muted);
-  font-size: 14px;
-  text-decoration: none;
-  transition: color 0.15s ease, transform 0.15s ease;
-}
-
-.nav-links a:hover {
-  color: var(--accent);
-  transform: translateY(-1px);
-}
-
-/* ===== Hero ===== */
-.hero {
-  padding: 40px 0 16px 0;
-}
-
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.hero-tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 4px 12px;
-  border-radius: 999px;
-  font-size: 12px;
-  color: var(--accent);
-  background: #fdf2f8;
-  border: 1px solid var(--border-subtle);
-  width: fit-content;
-}
-
-.hero h1 {
-  font-size: clamp(28px, 5vw, 36px);
-  letter-spacing: 0.02em;
-}
-
-.accent {
-  background: linear-gradient(to right, #ec4899, #a855f7);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.hero-subtitle {
-  max-width: 640px;
-  font-size: 14px;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 10px;
-  margin-top: 8px;
-}
-
-/* ===== Buttons ===== */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 16px;
-  border-radius: 999px;
-  font-size: 14px;
-  text-decoration: none;
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: background 0.15s ease, transform 0.15s ease,
-    box-shadow 0.15s ease, border-color 0.15s ease;
-}
-
-.btn.primary {
-  background: linear-gradient(to right, #ec4899, #f97316);
-  color: #ffffff;
-  font-weight: 600;
-  box-shadow: 0 12px 24px rgba(236, 72, 153, 0.3);
-}
-
-.btn.primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 16px 32px rgba(236, 72, 153, 0.4);
-}
-
-.btn.secondary {
-  border-color: var(--border-subtle);
-  color: var(--accent);
-  background: #fff7fb;
-}
-
-.btn.secondary:hover {
-  border-color: var(--accent);
-  background: #fdf2f8;
-}
-
-/* ===== Cards ===== */
-.card {
-  margin-top: 22px;
-  padding: 18px 18px 20px 18px;
-  border-radius: 18px;
-  background: #ffffff;
-  border: 1px solid var(--border-subtle);
-  box-shadow: 0 16px 40px rgba(248, 187, 208, 0.4);
-}
-
-.card h2 {
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-
-.card p {
-  font-size: 14px;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-/* ===== Skills ===== */
-.chip-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 10px;
-}
-
-.chip {
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid #fbcfe8;
-  background: #fff7fb;
-  color: #9d174d;
-}
-
-/* ===== Projects ===== */
-.project {
-  margin-top: 12px;
-  padding-top: 10px;
-  border-top: 1px dashed #f9a8d4;
-}
-
-.project:first-of-type {
-  border-top: none;
-  padding-top: 4px;
-}
-
-.project h3 {
-  font-size: 15px;
-  margin-bottom: 4px;
-  color: #9d174d;
-}
-
-.project-meta {
-  font-size: 12px;
-  color: var(--accent-secondary);
-  margin-bottom: 6px;
-}
-
-.project p {
-  font-size: 14px;
-}
-
-/* ===== Contact ===== */
-.contact-list {
-  list-style: none;
-  margin-top: 8px;
-}
-
-.contact-list li {
-  font-size: 14px;
-  color: var(--text-muted);
-  margin-bottom: 4px;
-}
-
-.contact-list a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.contact-list a:hover {
-  text-decoration: underline;
-}
-
-/* ===== Footer ===== */
-.footer {
-  text-align: center;
-  padding: 16px 0 24px 0;
-  font-size: 12px;
-  color: var(--text-muted);
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 640px) {
-  .nav {
-    padding-inline: 14px;
+<style>
+  :root {
+    --primary-color: #2b1e3a; /* Darker rich purple background */
+    --secondary-color: #3c2a55; /* Slightly lighter purple for cards/buttons */
+    --accent-color: #ff69b4; /* Hot pink accent */
+    --text-color: #f0e6f5; /* Soft off-white for text */
+    --card-bg: #3c2a55; /* Card background, darker than primary */
+    --chip-bg: #532f7f; /* Chips slightly darker purple */
+    --chip-text: #ffe6f0; /* Soft pink text inside chips */
   }
 
-  .nav-links {
-    gap: 10px;
-  }
-
-  main {
-    margin-top: 70px;
+  body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
   }
 
   .card {
-    padding-inline: 14px;
+    background-color: var(--card-bg);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
   }
 
-  .hero-buttons {
-    flex-direction: column;
-    align-items: flex-start;
+  .chip {
+    background-color: var(--chip-bg);
+    color: var(--chip-text);
+    padding: 5px 10px;
+    border-radius: 16px;
+    margin: 4px;
+    display: inline-block;
   }
-}
+
+  a {
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .btn.primary {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+
+  .btn.secondary {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+  }
+
+  h1, h2, h3 {
+    color: #ffe6f0; /* Soft pink for headings */
+  }
+</style>
 
