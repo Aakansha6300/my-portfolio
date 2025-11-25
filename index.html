@@ -5,6 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aakansha | DevOps Engineer</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --primary-color: #1a1a1a; /* Darker primary */
+      --secondary-color: #333333; /* Darker secondary */
+      --accent-color: #ff6600; /* Accent */
+      --text-color: #eee;
+      --card-bg: #2a2a2a;
+      --chip-bg: #444;
+      --chip-text: #fff;
+    }
+
+    body {
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 20px;
+      margin: 20px;
+      border-radius: 8px;
+    }
+
+    .chip {
+      background-color: var(--chip-bg);
+      color: var(--chip-text);
+      padding: 5px 10px;
+      border-radius: 16px;
+      margin: 4px;
+      display: inline-block;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .btn.primary {
+      background-color: var(--accent-color);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    .btn.secondary {
+      background-color: var(--secondary-color);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 <body>
   <header class="nav">
@@ -88,7 +147,25 @@
         </p>
       </article>
 
-      <!-- You can add more project blocks later -->
+      <article class="project">
+        <h3>Hands-on DevOps Practice: Containerized Node.js + MySQL Using Docker Compose</h3>
+        <p class="project-meta">Tech: Docker, Docker Compose, Node.js, MySQL</p>
+        <p>
+          Just completed a mini DevOps project where I containerized a Node.js API and a MySQL database,
+          orchestrated using Docker Compose.
+        </p>
+        <ul>
+          <li>Wrote a Dockerfile to build the Node.js app image</li>
+          <li>Used Docker Compose to run multi-container architecture</li>
+          <li>Configured environment variables, networking, and volumes</li>
+          <li>Implemented a wait-for-db script to handle container dependency issues</li>
+          <li>Debugged container exits, image path issues, and DB connectivity errors</li>
+        </ul>
+        <p>
+          A simple but solid exercise in containerization, service orchestration, and troubleshooting.
+        </p>
+      </article>
+
     </section>
 
     <!-- CONTACT -->
@@ -110,7 +187,6 @@
   </footer>
 
   <script>
-    // Simple JS just to keep the year updated
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
